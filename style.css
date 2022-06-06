@@ -226,6 +226,15 @@ p {
 }
 
 @media (max-width: 1000px) {
+     .profilText h2 {
+        font-size: 30px;
+    }
+
+    .profilText h2 span {
+        font-size: 25px;
+        font-weight:300;
+    }
+    
     .profilText .imgbx {
         position: relative;
         margin-left: 21rem;
@@ -244,7 +253,7 @@ p {
         color: #333;
         font-weight: 500;
         margin: 10px 0px;
-        word-spacing:15px;
+        word-spacing:20px;
     }
 }
 
