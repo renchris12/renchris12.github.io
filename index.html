@@ -19,6 +19,40 @@
     </script>
 </head>
 <body>
+     <!--Navbar Start-->
+     <nav class="p-5 bg-white shadow-lg md:flex md:items-center md:justify-between">
+        <div class="flex justify-between items-center">
+        <span class="text-3xl text-dark font-bold font-[cursive] cursor-pointer">
+           Ren<span class="text-blue-500">Chris</span>
+        </span>
+
+        <span class="text-3xl cursor-pointer md:hidden block">
+            <button onclick="Menu()">  <i class="fa-solid fa-bars bars" ></i></button>
+            <button onclick="clsMenu()"><i class="fa-solid fa-xmark hidden cls mr-2"></i></button>
+        </span>
+        </div>
+
+        <ul id="menu" class="md:flex md:items-center md:z-auto md:static absolute
+        bg-white/50 backdrop-blur-sm w-full shadow-lg left-0 md:shadow-none md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-100
+        tp transition-all ease-in duration-200">
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#home" class="text-xl hover:text-blue-500 duration-500">Home</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#about" class="text-xl hover:text-blue-500 duration-500">About</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#portfolio" class="text-xl hover:text-blue-500 duration-500">Portfolio</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#blog" class="text-xl hover:text-blue-500 duration-500">Blog</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#contact" class="text-xl hover:text-blue-500 duration-500">Contact Us</a>
+            </li>
+        </ul>
+     </nav>
+    <!--Navbar Close-->
     <!-- Hero section start -->
     <section id="home" class="">
         <div class="container 2xl:p-[10px] ml-auto md:ml-auto">
@@ -278,6 +312,21 @@
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        const text = document.getElementById('menu');
+        const bars = document.querySelector('.bars');
+        const close = document.querySelector('.cls');
+        function Menu() {
+           bars.classList.add("hidden");
+           close.classList.remove("hidden");
+           text.classList.toggle("tp");
+        }
+        function clsMenu() {
+           bars.classList.remove("hidden");
+           close.classList.add("hidden");
+           text.classList.toggle("tp");
+        }
     </script>
 </body>
 </html>
